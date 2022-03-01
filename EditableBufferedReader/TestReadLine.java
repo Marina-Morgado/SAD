@@ -8,9 +8,12 @@ class TestReadLine {
     Integer num = 0;
     try {
       //str = in.readLine();
-      num = in.read();
+      in.setRaw();
+            num = in.read();
+      in.unSetRaw();
     } catch (IOException e) { e.printStackTrace(); }
     //System.out.println("\nline is: " + str);
+    
     System.out.println("\nChar is: " + num);
   }
 }
