@@ -40,7 +40,7 @@ public class EditableBufferedReader extends BufferedReader {
 
     public void unSetRaw() {
 
-        String[] command = { "/bin/bash", "stty -echo cooked </dev/tty" };
+        String[] command = { "/bin/bash", "-c", "stty -echo cooked </dev/tty" };
         try {
             Runtime.getRuntime().exec(command).waitFor();
         } catch (IOException e) {
