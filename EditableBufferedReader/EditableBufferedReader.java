@@ -70,6 +70,8 @@ public class EditableBufferedReader extends BufferedReader {
                         return -1;
                     case 'C': // left
                         return -2;
+                    case 'H':
+                        return -3;
                 }
             }
             return key;
